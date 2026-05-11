@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostafa Emad — Flutter Mobile Developer</title>
+    <meta name="description" content="Portfolio of Mostafa Emad, a Flutter Mobile Developer specializing in cross-platform mobile apps, Firebase, and REST APIs.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Particle Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">M<span class="accent">.</span>E</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#activities" class="nav-link">Activities</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-greeting reveal-up">Hello, I'm</p>
+                <h1 class="hero-name reveal-up">Mostafa <span class="accent">Emad</span></h1>
+                <div class="hero-title-wrapper reveal-up">
+                    <span class="hero-title-prefix">I'm a </span>
+                    <span class="typing-text" id="typing-text"></span>
+                    <span class="typing-cursor">|</span>
+                </div>
+                <p class="hero-description reveal-up">Building beautiful cross-platform mobile experiences with Flutter & Dart. Passionate about clean code, intuitive UI, and real-time applications.</p>
+                <div class="hero-buttons reveal-up">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> View My Work
+                    </a>
+                    <a href="assets/docs/Mostafa_Emad_CV.pdf" download class="btn btn-outline" id="download-cv-hero">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                </div>
+                <div class="hero-socials reveal-up">
+                    <a href="https://github.com/mostafaemad21" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/mostafa-emad-0b4947330" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:mostafaemadsaeed33@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="hero-image reveal-up">
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-glow"></div>
+                    <img src="assets/images/profile.jpg" alt="Mostafa Emad" loading="eager">
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+            <div class="mouse"><div class="wheel"></div></div>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title reveal-up">About <span class="accent">Me</span></h2>
+            <p class="section-subtitle reveal-up">Get to know me better</p>
+            <div class="about-grid">
+                <div class="about-text reveal-left">
+                    <p>I am <strong>Mostafa Emad</strong>, a Mobile Application Developer with hands-on experience building cross-platform mobile apps using <strong>Flutter</strong> and <strong>Dart</strong>.</p>
+                    <p>I completed a scholarship at the <strong>National Telecommunication Institute (NTI)</strong>, gaining over <strong>90 hours</strong> of practical training in mobile development. I am proficient in Android Studio, Visual Studio, and Figma, and have worked on multiple mobile projects applying modern development practices.</p>
+                    <p>Alongside my academic projects at <strong>AAST</strong>, I focus on delivering clean, efficient solutions and working closely with clients to ensure high-quality results and full satisfaction.</p>
+                </div>
+                <div class="about-cards reveal-right">
+                    <div class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3>Education</h3>
+                        <p>B.Sc. Software Engineering</p>
+                        <span>AAST — South Valley University</span>
+                        <span class="info-date">2022 — 2026</span>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-briefcase"></i></div>
+                        <h3>Experience</h3>
+                        <p>Mobile App Developer Trainee</p>
+                        <span>National Telecommunication Institute (NTI)</span>
+                        <span class="info-date">Nov 2025 — Jan 2026</span>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h3>Location</h3>
+                        <p>Aswan, Egypt</p>
+                        <span>Open to remote opportunities</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <h2 class="section-title reveal-up">My <span class="accent">Projects</span></h2>
+            <p class="section-subtitle reveal-up">A showcase of my recent work</p>
+            <div class="projects-grid">
+
+                <div class="project-card reveal-up">
+                    <div class="project-card-header">
+                        <div class="project-icon"><i class="fas fa-gamepad"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/mostafaemad21/Anupes_Coatch" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Anupes Coach</h3>
+                    <p class="project-desc">A mobile game application with role-based functionality. Built separate home pages for users and coaches, integrated backend services and REST APIs for all app features including data handling, user interactions, and game logic.</p>
+                    <div class="project-role"><i class="fas fa-user"></i> Solo Developer — NTI Demo Project</div>
+                    <div class="project-tags">
+                        <span>Flutter</span><span>Dart</span><span>REST APIs</span><span>Firebase</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal-up">
+                    <div class="project-card-header">
+                        <div class="project-icon"><i class="fas fa-book-open"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/mostafaemad21/StudyFlow" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">StudyFlow</h3>
+                    <p class="project-desc">An educational mobile application designed to help students organize their study sessions, track progress, and manage their academic workflow efficiently with an intuitive and modern interface.</p>
+                    <div class="project-role"><i class="fas fa-user"></i> Solo Developer</div>
+                    <div class="project-tags">
+                        <span>Flutter</span><span>Dart</span><span>Firebase</span><span>UI/UX</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal-up">
+                    <div class="project-card-header">
+                        <div class="project-icon"><i class="fas fa-globe"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/mostafaemad21/Earthquake_API" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Earthquake Tracker</h3>
+                    <p class="project-desc">A real-time earthquake monitoring app that fetches live data from public seismological APIs. Displays earthquake locations, magnitudes, and details with an interactive and responsive mobile UI.</p>
+                    <div class="project-role"><i class="fas fa-user"></i> Solo Developer</div>
+                    <div class="project-tags">
+                        <span>Flutter</span><span>Dart</span><span>REST APIs</span><span>JSON</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal-up">
+                    <div class="project-card-header">
+                        <div class="project-icon"><i class="fas fa-shopping-cart"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/mostafaemad21/app_shoping" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Shopping App</h3>
+                    <p class="project-desc">A full-featured e-commerce mobile application with product browsing, cart management, and a smooth checkout experience. Implements modern UI patterns and responsive design for a seamless shopping experience.</p>
+                    <div class="project-role"><i class="fas fa-user"></i> Solo Developer</div>
+                    <div class="project-tags">
+                        <span>Flutter</span><span>Dart</span><span>Firebase</span><span>State Management</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal-up">
+                    <div class="project-card-header">
+                        <div class="project-icon"><i class="fas fa-tasks"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/mostafaemad21/Tasks_application" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Tasks Application</h3>
+                    <p class="project-desc">A task management application built with C++ demonstrating strong OOP principles, data structures, and algorithm implementation. Features full CRUD operations for efficient task organization.</p>
+                    <div class="project-role"><i class="fas fa-user"></i> Solo Developer — Academic Project</div>
+                    <div class="project-tags">
+                        <span>C++</span><span>OOP</span><span>Data Structures</span>
+                    </div>
+                </div>
+
+                <div class="project-card reveal-up">
+                    <div class="project-card-header">
+                        <div class="project-icon"><i class="fas fa-vial"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/mostafaemad21/project_testing" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">User Validation Testing</h3>
+                    <p class="project-desc">A unit testing project for user validation features built in Python. Demonstrates software quality assurance practices, test-driven development, and comprehensive test coverage for input validation.</p>
+                    <div class="project-role"><i class="fas fa-user"></i> Solo Developer — Academic Assignment</div>
+                    <div class="project-tags">
+                        <span>Python</span><span>Unit Testing</span><span>TDD</span><span>QA</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <h2 class="section-title reveal-up">My <span class="accent">Skills</span></h2>
+            <p class="section-subtitle reveal-up">Technologies & tools I work with</p>
+            <div class="skills-grid">
+                <div class="skill-category reveal-up">
+                    <h3><i class="fas fa-code"></i> Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item"><div class="skill-icon"><i class="fab fa-flutter"></i></div><span>Dart</span></div>
+                        <div class="skill-item"><div class="skill-icon"><i class="fab fa-python"></i></div><span>Python</span></div>
+                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-code"></i></div><span>C++</span></div>
+                        <div class="skill-item"><div class="skill-icon"><i class="fab fa-html5"></i></div><span>HTML</span></div>
+                        <div class="skill-item"><div class="skill-icon"><i class="fab fa-css3-alt"></i></div><span>CSS</span></div>
+                        <div class="skill-item"><div class="skill-icon"><i class="fab fa-js"></i></div><span>JavaScript</span></div>
+                    </div>
+                </div>
+                <div class="skill-category reveal-up">
+                    <h3><i class="fas fa-layer-group"></i> Frameworks & SDKs</h3>
+                    <div class="skill-items">
+                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-mobile-alt"></i></div><span>Flutter</span></div>
+                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-fire"></i></div><span>Firebase</span></div>
+                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-exchange-alt"></i></div><span>REST APIs</span></div>
+                    </div>
+                </div>
+                <div class="skill-category reveal-up">
+                    <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+                    <div class="skill-items">
+                        <div class="skill-item"><div class="skill-icon"><i class="fab fa-android"></i></div><span>Android Studio</span></div>
+                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-laptop-code"></i></div><span>VS Code</span></div>
+                        <div class="skill-item"><div class="skill-icon"><i class="fab fa-figma"></i></div><span>Figma</span></div>
+                        <div class="skill-item"><div class="skill-icon"><i class="fab fa-git-alt"></i></div><span>Git & GitHub</span></div>
+                        <div class="skill-item"><div class="skill-icon"><i class="fab fa-google-play"></i></div><span>Google Play</span></div>
+                    </div>
+                </div>
+                <div class="skill-category reveal-up">
+                    <h3><i class="fas fa-brain"></i> Soft Skills</h3>
+                    <div class="skill-items">
+                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-lightbulb"></i></div><span>Problem Solving</span></div>
+                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-users"></i></div><span>Team Collaboration</span></div>
+                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-paint-brush"></i></div><span>UI/UX Design</span></div>
+                        <div class="skill-item"><div class="skill-icon"><i class="fas fa-database"></i></div><span>Database Management</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section class="section activities" id="activities">
+        <div class="container">
+            <h2 class="section-title reveal-up">Activities & <span class="accent">Experience</span></h2>
+            <p class="section-subtitle reveal-up">Beyond the code</p>
+            <div class="activities-grid">
+                <div class="activity-card reveal-up">
+                    <div class="activity-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="activity-content">
+                        <h3>ICPC Competitive Programming</h3>
+                        <span class="activity-date">2022 — First Year</span>
+                        <p>Participated in the International Collegiate Programming Contest (ICPC), sharpening problem-solving skills, algorithmic thinking, and competitive coding abilities under time pressure.</p>
+                        <div class="activity-tags">
+                            <span>Problem Solving</span><span>Algorithms</span><span>Competitive Programming</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="activity-card reveal-up">
+                    <div class="activity-icon"><i class="fas fa-laptop-code"></i></div>
+                    <div class="activity-content">
+                        <h3>NTI Mobile Development Scholarship</h3>
+                        <span class="activity-date">Nov 2025 — Jan 2026</span>
+                        <p>Completed an intensive 90+ hour practical training program at the National Telecommunication Institute (NTI) in Aswan. Built multiple real-world Flutter applications, integrated Firebase services, and prepared apps for Google Play Store deployment.</p>
+                        <div class="activity-tags">
+                            <span>Flutter</span><span>Firebase</span><span>90+ Hours</span><span>Professional Training</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="activity-card reveal-up">
+                    <div class="activity-icon"><i class="fas fa-university"></i></div>
+                    <div class="activity-content">
+                        <h3>Software Engineering at AAST</h3>
+                        <span class="activity-date">2022 — Present</span>
+                        <p>Pursuing a Bachelor's degree in Computer Software Engineering at AAST — South Valley University. Engaged in academic projects spanning mobile development, software testing, web development, and data structures.</p>
+                        <div class="activity-tags">
+                            <span>Software Engineering</span><span>Academic Projects</span><span>Research</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title reveal-up">Get In <span class="accent">Touch</span></h2>
+            <p class="section-subtitle reveal-up">Let's build something amazing together</p>
+            <div class="contact-grid">
+                <div class="contact-info reveal-left">
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="mailto:mostafaemadsaeed33@gmail.com">mostafaemadsaeed33@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h3>Phone</h3>
+                            <a href="tel:+201153168591">+20 115 316 8591</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Aswan, Egypt</p>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://github.com/mostafaemad21" target="_blank" rel="noopener" class="contact-social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/mostafa-emad-0b4947330" target="_blank" rel="noopener" class="contact-social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:mostafaemadsaeed33@gmail.com" class="contact-social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <a href="assets/docs/Mostafa_Emad_CV.pdf" download class="btn btn-primary btn-download-cv" id="download-cv-contact">
+                        <i class="fas fa-download"></i> Download My CV
+                    </a>
+                </div>
+                <form class="contact-form reveal-right" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="form-name" name="name" placeholder=" " required>
+                        <label for="form-name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="form-email" name="email" placeholder=" " required>
+                        <label for="form-email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="form-subject" name="subject" placeholder=" ">
+                        <label for="form-subject">Subject</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="form-message" name="message" rows="5" placeholder=" " required></textarea>
+                        <label for="form-message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#hero" class="footer-logo">M<span class="accent">.</span>E</a>
+                <p>&copy; 2026 Mostafa Emad. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
